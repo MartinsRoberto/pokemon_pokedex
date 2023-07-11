@@ -1,6 +1,6 @@
 {
-  "homepage": "https://martinsroberto.github.io/pokedex/",
-  "name": "pokedex",
+  "homepage": "https://martinsroberto.github.io/pokemon_pokedex/",
+  "name": "pokemon_pokedex",
   "private": true,
   "version": "0.0.0",
   "type": "module",
