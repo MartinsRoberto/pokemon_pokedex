@@ -7,27 +7,23 @@ import PokemonInfoSubMenu from './PokemonInfoSubMenu'
 
 const PokemonInfo = ({ pokemonInfoData, setScreen }) => {
   const [changeInfoScreen, setChangeInfoScreen] = useState('stats')
-  const [widthScreen, setWidthScreen] = useState('')
 
+  console.log(pokemonInfoData)
   const { types } = pokemonInfoData
 
   const getTypeColor = (type) => {
     return colours[type] || '#000000'
   }
 
-  useEffect(() => {
-    setWidthScreen(window.innerWidth)
-  }, [])
-
   const mainColor = getTypeColor(types[0].type.name)
 
 
   return (
-    <div style={{ backgroundColor: mainColor }} className='min-h-screen pb-10'>
+    <div style={{ backgroundColor: mainColor }} className='min-h-screen pb-10 text-zinc-700'>
 
       <button onClick={() => setScreen('pokemonList')} className='text-white font-bold p-2'>Voltar</button>
 
-      <div className='bg-white max-w-md mx-auto mt-32 rounded-3xl pt-6 px-4 pb-16 md:px-32 lg:px-10'>
+      <div className='bg-white max-w-md mx-auto mt-32 rounded-3xl pt-6 px-4 pb-16'>
 
         <PokemonInfoHeader pokemonInfoData={pokemonInfoData} />
 

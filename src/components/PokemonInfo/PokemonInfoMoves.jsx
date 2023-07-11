@@ -52,7 +52,7 @@ const PokemonInfoMoves = ({ moves }) => {
         {movesLevel.length > 0 ? (
           movesLevel.map((item) => (
             <tr key={item.name} className='text-gray-600 grid grid-cols-12 text-center py-2'>
-              <td className='capitalize col-span-6'>{item.name}</td>
+              <td className='capitalize col-span-6 text-left'>{item.name}</td>
               <td
                 className='col-span-4 bg-slate-400 rounded-full uppercase text-sm font-semibold text-white '
                 style={{ backgroundColor: getTypeColor(item.type) }}
